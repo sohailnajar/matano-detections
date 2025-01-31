@@ -1,0 +1,17 @@
+# This file was generated from a Sigma rule
+
+author: daniel.bohannon@permiso.io (@danielhbohannon)
+date: None
+description: Detects S3 browser utility creating Inline IAM policy containing default
+  S3 bucket name placeholder value of "<YOUR-BUCKET-NAME>".
+id: db014773-7375-4f4e-b83b-133337c0ffee
+level: high
+references:
+- https://permiso.io/blog/s/unmasking-guivil-new-cloud-threat-actor
+status: test
+
+
+name: aws_iam_s3_browser_templated_s3_bucket_policy_creation
+tables:
+- aws_cloudtrail
+

@@ -1,0 +1,17 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer @austinsonger
+date: None
+description: Detects possible suspicious glue development endpoint activity.
+id: 4990c2e3-f4b8-45e3-bc3c-30b14ff0ed26
+level: low
+references:
+- https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/
+- https://docs.aws.amazon.com/glue/latest/webapi/API_CreateDevEndpoint.html
+status: test
+
+
+name: aws_glue_development_endpoint_activity
+tables:
+- aws_cloudtrail
+

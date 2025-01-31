@@ -1,0 +1,23 @@
+# This file was generated from a Sigma rule
+
+author: Ivan Saakov
+date: None
+description: 'Detects the deletion of an AWS SAML provider, potentially indicating
+  malicious intent to disrupt administrative or security team access.
+
+  An attacker can remove the SAML provider for the information security team or a
+  team of system administrators, to make it difficult for them to work and investigate
+  at the time of the attack and after it.
+
+  '
+id: ccd6a6c8-bb4e-4a91-9d2a-07e632819374
+level: medium
+references:
+- https://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteSAMLProvider.html
+status: experimental
+
+
+name: aws_saml_provider_deletion_activity
+tables:
+- aws_cloudtrail
+

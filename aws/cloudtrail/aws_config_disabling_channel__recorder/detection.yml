@@ -1,0 +1,16 @@
+# This file was generated from a Sigma rule
+
+author: vitaliy0x1
+date: None
+description: Detects AWS Config Service disabling
+id: 07330162-dba1-4746-8121-a9647d49d297
+level: high
+references:
+- https://docs.aws.amazon.com/config/latest/developerguide/cloudtrail-log-files-for-aws-config.html
+status: test
+
+
+name: aws_config_disabling_channel__recorder
+tables:
+- aws_cloudtrail
+

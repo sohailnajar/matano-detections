@@ -1,0 +1,22 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer @austinsonger
+date: None
+description: Detects when a user tampers with S3 data management in Amazon Web Services.
+id: 78b3756a-7804-4ef7-8555-7b9024a02e2d
+level: low
+references:
+- https://github.com/elastic/detection-rules/pull/1145/files
+- https://docs.aws.amazon.com/AmazonS3/latest/API/API_Operations.html
+- https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLogging.html
+- https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketWebsite.html
+- https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketEncryption.html
+- https://docs.aws.amazon.com/AmazonS3/latest/userguide/setting-repl-config-perm-overview.html
+- https://docs.aws.amazon.com/AmazonS3/latest/API/API_RestoreObject.html
+status: test
+
+
+name: aws_s3_data_management_tampering
+tables:
+- aws_cloudtrail
+

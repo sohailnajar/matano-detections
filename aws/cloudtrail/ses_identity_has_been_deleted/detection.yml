@@ -1,0 +1,18 @@
+# This file was generated from a Sigma rule
+
+author: Janantha Marasinghe
+date: None
+description: Detects an instance of an SES identity being deleted via the "DeleteIdentity"
+  event. This may be an indicator of an adversary removing the account that carried
+  out suspicious or malicious activities
+id: 20f754db-d025-4a8f-9d74-e0037e999a9a
+level: medium
+references:
+- https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/
+status: test
+
+
+name: ses_identity_has_been_deleted
+tables:
+- aws_cloudtrail
+

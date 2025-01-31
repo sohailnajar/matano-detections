@@ -1,0 +1,18 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer @austinsonger
+date: None
+description: Identifies the suspicious use of AssumeRole. Attackers could move laterally
+  and escalate privileges.
+id: 905d389b-b853-46d0-9d3d-dea0d3a3cd49
+level: low
+references:
+- https://github.com/elastic/detection-rules/pull/1214
+- https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html
+status: test
+
+
+name: aws_sts_assume_role_misuse
+tables:
+- aws_cloudtrail
+

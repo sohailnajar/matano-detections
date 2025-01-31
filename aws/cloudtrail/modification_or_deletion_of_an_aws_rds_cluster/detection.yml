@@ -1,0 +1,20 @@
+# This file was generated from a Sigma rule
+
+author: Ivan Saakov
+date: None
+description: Detects modifications to an RDS cluster or its deletion, which may indicate
+  potential data exfiltration attempts, unauthorized access, or exposure of sensitive
+  information.
+id: 457cc9ac-d8e6-4d1d-8c0e-251d0f11a74c
+level: high
+references:
+- https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBCluster.html
+- https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DeleteDBCluster.html
+- https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-rds-privesc#rds-modifydbinstance
+status: experimental
+
+
+name: modification_or_deletion_of_an_aws_rds_cluster
+tables:
+- aws_cloudtrail
+

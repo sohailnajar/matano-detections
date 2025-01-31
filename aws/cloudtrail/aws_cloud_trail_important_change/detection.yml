@@ -1,0 +1,16 @@
+# This file was generated from a Sigma rule
+
+author: vitaliy0x1
+date: None
+description: Detects disabling, deleting and updating of a Trail
+id: 4db60cc0-36fb-42b7-9b58-a5b53019fb74
+level: medium
+references:
+- https://docs.aws.amazon.com/awscloudtrail/latest/userguide/best-practices-security.html
+status: test
+
+
+name: aws_cloud_trail_important_change
+tables:
+- aws_cloudtrail
+

@@ -1,0 +1,17 @@
+# This file was generated from a Sigma rule
+
+author: Elastic, Austin Songer @austinsonger
+date: None
+description: Detects when a request has been made to transfer a Route 53 domain to
+  another AWS account.
+id: b056de1a-6e6e-4e40-a67e-97c9808cf41b
+level: low
+references:
+- https://github.com/elastic/detection-rules/blob/c76a39796972ecde44cb1da6df47f1b6562c9770/rules/integrations/aws/persistence_route_53_domain_transferred_to_another_account.toml
+status: test
+
+
+name: aws_route_53_domain_transferred_to_another_account
+tables:
+- aws_cloudtrail
+

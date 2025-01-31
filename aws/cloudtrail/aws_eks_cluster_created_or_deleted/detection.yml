@@ -1,0 +1,16 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer
+date: None
+description: Identifies when an EKS cluster is created or deleted.
+id: 33d50d03-20ec-4b74-a74e-1e65a38af1c0
+level: low
+references:
+- https://any-api.com/amazonaws_com/eks/docs/API_Description
+status: test
+
+
+name: aws_eks_cluster_created_or_deleted
+tables:
+- aws_cloudtrail
+

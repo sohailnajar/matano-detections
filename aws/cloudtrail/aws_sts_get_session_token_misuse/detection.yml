@@ -1,0 +1,18 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer @austinsonger
+date: None
+description: Identifies the suspicious use of GetSessionToken. Tokens could be created
+  and used by attackers to move laterally and escalate privileges.
+id: b45ab1d2-712f-4f01-a751-df3826969807
+level: low
+references:
+- https://github.com/elastic/detection-rules/pull/1213
+- https://docs.aws.amazon.com/STS/latest/APIReference/API_GetSessionToken.html
+status: test
+
+
+name: aws_sts_get_session_token_misuse
+tables:
+- aws_cloudtrail
+

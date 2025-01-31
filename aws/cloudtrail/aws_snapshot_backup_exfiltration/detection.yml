@@ -1,0 +1,17 @@
+# This file was generated from a Sigma rule
+
+author: Darin Smith
+date: None
+description: Detects the modification of an EC2 snapshot's permissions to enable access
+  from another account
+id: abae8fec-57bd-4f87-aff6-6e3db989843d
+level: medium
+references:
+- https://www.justice.gov/file/1080281/download
+status: test
+
+
+name: aws_snapshot_backup_exfiltration
+tables:
+- aws_cloudtrail
+

@@ -1,0 +1,23 @@
+# This file was generated from a Sigma rule
+
+author: jamesc-grafana
+date: None
+description: 'Detects changes to the security group entries for RDS databases.
+
+  This can indicate that a misconfiguration has occurred which potentially exposes
+  the database to the public internet, a wider audience within the VPC or that removal
+  of valid rules has occurred which could impact the availability of the database
+  to legitimate services and users.
+
+  '
+id: 14f3f1c8-02d5-43a2-a191-91ffb52d3015
+level: medium
+references:
+- https://www.gorillastack.com/blog/real-time-events/important-aws-cloudtrail-security-events-tracking/
+status: test
+
+
+name: rds_database_security_group_modification
+tables:
+- aws_cloudtrail
+

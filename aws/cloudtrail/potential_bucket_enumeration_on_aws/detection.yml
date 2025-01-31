@@ -1,0 +1,18 @@
+# This file was generated from a Sigma rule
+
+author: Christopher Peacock @securepeacock, SCYTHE @scythe_io
+date: None
+description: Looks for potential enumeration of AWS buckets via ListBuckets.
+id: f305fd62-beca-47da-ad95-7690a0620084
+level: low
+references:
+- https://github.com/Lifka/hacking-resources/blob/c2ae355d381bd0c9f0b32c4ead049f44e5b1573f/cloud-hacking-cheat-sheets.md
+- https://jamesonhacking.blogspot.com/2020/12/pivoting-to-private-aws-s3-buckets.html
+- https://securitycafe.ro/2022/12/14/aws-enumeration-part-ii-practical-enumeration/
+status: test
+
+
+name: potential_bucket_enumeration_on_aws
+tables:
+- aws_cloudtrail
+

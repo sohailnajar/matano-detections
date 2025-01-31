@@ -1,0 +1,25 @@
+# This file was generated from a Sigma rule
+
+author: Ivan Saakov
+date: None
+description: 'Detects when a user creates a Lambda function URL configuration, which
+  could be used to expose the function to the internet and potentially allow unauthorized
+  access to the function''s IAM role for AWS API calls.
+
+  This could give an adversary access to the privileges associated with the Lambda
+  service role that is attached to that function.
+
+  '
+id: ec541962-c05a-4420-b9ea-84de072d18f4
+level: medium
+references:
+- https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunctionUrlConfig.html
+- https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-privilege-escalation/aws-lambda-privesc
+- https://www.wiz.io/blog/how-to-set-secure-defaults-on-aws
+status: experimental
+
+
+name: new_aws_lambda_function_url_configuration_created
+tables:
+- aws_cloudtrail
+

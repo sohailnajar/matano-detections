@@ -1,0 +1,19 @@
+# This file was generated from a Sigma rule
+
+author: jamesc-grafana
+date: None
+description: 'Detects that network ACL entries have been added to a route table which
+  could indicate that new attack vectors have been opened up in the AWS account.
+
+  '
+id: e1f7febb-7b94-4234-b5c6-00fb8500f5dd
+level: low
+references:
+- https://www.gorillastack.com/blog/real-time-events/important-aws-cloudtrail-security-events-tracking/
+status: test
+
+
+name: new_network_acl_entry_added
+tables:
+- aws_cloudtrail
+

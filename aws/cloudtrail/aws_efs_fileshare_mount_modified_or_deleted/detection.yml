@@ -1,0 +1,18 @@
+# This file was generated from a Sigma rule
+
+author: Austin Songer @austinsonger
+date: None
+description: Detects when a EFS Fileshare Mount is modified or deleted. An adversary
+  breaking any file system using the mount target that is being deleted, which might
+  disrupt instances or applications using those mounts.
+id: 6a7ba45c-63d8-473e-9736-2eaabff79964
+level: medium
+references:
+- https://docs.aws.amazon.com/efs/latest/ug/API_DeleteMountTarget.html
+status: test
+
+
+name: aws_efs_fileshare_mount_modified_or_deleted
+tables:
+- aws_cloudtrail
+
